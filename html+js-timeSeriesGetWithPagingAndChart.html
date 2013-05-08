@@ -25,7 +25,7 @@
             }).done(function (data) {
                 pages = pages + 1;
                 //this example gets all of the datapoint objects of the request and puts them in a local array before returning the complete dataset
-                //alternate implementations might render these data points here as they come in to provide a more interactive and fluid page load
+                //alternate implementations might render these data points here as they come in to provide a more responsive and fluid page load
                 $.each(data.Items, function (i, item) {
                     dataValues = dataValues + item.timeValue + ',' + item.value + '\n';
                 });
