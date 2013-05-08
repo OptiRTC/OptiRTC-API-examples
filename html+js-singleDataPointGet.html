@@ -6,7 +6,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $.ajax({
-                url: "http://127.0.0.1:81/api/datapoint/2520361370999999999?key={YOUR-KEY-HERE, NO BRACKETS}&dataStreamId=3160",
+                url: "http://public.optirtc.com/api/datapoint/2520361370999999999?key={YOUR-KEY-HERE, NO BRACKETS}&dataStreamId=3160",
                 dataType: "json",
             }).done(function (data) {
                 alert('time: ' + data.timeValue + '\n' + 'value: ' + data.value);
