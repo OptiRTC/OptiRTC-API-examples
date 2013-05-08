@@ -5,3 +5,6 @@ OptiRTC-API-examples provides examples of using open-source technologies to inte
 
 [GET a DataPoint](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-singleDataPointGet.html)
 
+[GET a time range of DataPoints, output to browser javascript console](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPaging.html)
+
+[GET a time range of DataPoints, output to browser javascript console](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPaging.html)
