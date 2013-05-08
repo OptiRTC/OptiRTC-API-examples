@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>    
+    <script type="text/javascript">        
+        //declare global variables
+        var dataValues = [];
+        var pages = 0;
+
+        function GetValues(url) {            
+            $.ajax({
+                url: url,
+                dataType: "json",
+            }).done(function (data) {
+                pages = pages + 1;
+                //this example gets all of the datapoint objects of the request and puts them in a local array before returning the complete dataset
+                //alternate implementations might render these data points here as they come in to provide a more interactive and fluid page load
+                $.each(data.Items, function (i, item) {
+                    dataValues.push(item);
+                });
+
+                //write out this response to the console so you can see what each page looks like as it comes in
+                console.log(data);
+
+                //handle paging; next page of data provided by NextPageLink, which is typeof() == 'undefined' if the client just received the last page of data
+                //see http://stackoverflow.com/questions/3390396/how-to-check-for-undefined-in-javascript
+                if (typeof (data.NextPageLink) != 'undefined') {
+                    GetValues(data.NextPageLink);
+                }
+                else {
+                    //paging complete                     
+                    console.log('\n');
+                    console.log('Paging complete, total datapoints received: ' + dataValues.length + ' in ' + pages + ' pages.');
+                    console.log(dataValues);
+                }                
+            });
+        };
+
+        $(document).ready(function () {            
+            //load a document of OptiRTC data.
+            GetValues("http://public.optirtc.com/api/datapoint/?key={YOUR-KEY-HERE, NO BRACKETS}&dataStreamId={dataStreamId}&utcHistorical=5/2/2013&utcModern=5/8/2013");
+        });
+    </script>
+    <meta charset="utf-8" />
+    <title>HTML5 and jQuery.js demonstration of the OptiRTC Public HTTP API.</title>
+</head>
+<body>
+    <p>HTML5 and jQuery.js demonstration of the OptiRTC Public HTTP API.</p>
+    <p>GET a time range of datapoints and writing them to the browser's javascript console when all of the data from the original request is received</p>
+    <p>In Google Chrome, open the Developer Tools and navigate to the Console tab to see the output of this function.</p>
+    <div id="vis"></div>
+</body>
+</html>
