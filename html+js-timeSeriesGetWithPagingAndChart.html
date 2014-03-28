@@ -27,7 +27,7 @@
                 //this example gets all of the datapoint objects of the request and puts them in a local array before returning the complete dataset
                 //alternate implementations might render these data points here as they come in to provide a more responsive and fluid page load
                 $.each(data.Items, function (i, item) {
-                    dataValues = dataValues + item.timeValue + ',' + item.value + '\n';
+                    dataValues = dataValues + item.timeValue + ',' + item.value[0].value + '\n';
                 });
 
                 //show the last page of data in the browser javascript console => remove in production systems
