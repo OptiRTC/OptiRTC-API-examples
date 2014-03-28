@@ -17,6 +17,7 @@
         //declare global variables
         var dataValues = "Date, Temperature [deg F]\n";
         var pages = 0;
+        var totalCount = 0;
 
         function GetValues(url) {
             $.ajax({
@@ -29,6 +30,8 @@
                 $.each(data.Items, function (i, item) {
                     dataValues = dataValues + item.timeValue + ',' + item.value[0].value + '\n';
                 });
+                
+                totalCount = totalCount + data.Count;
 
                 //show the last page of data in the browser javascript console => remove in production systems
                 console.log(data);
@@ -41,7 +44,7 @@
                 else {
                     //paging complete                     
                     console.log('\n');
-                    console.log('Paging complete, total datapoints received: ' + dataValues.length + ' in ' + pages + ' pages.');
+                    console.log('Paging complete, total non-null datapoints received: ' + totalCount + ' in ' + pages + ' pages.');
 
                     g = new Dygraph(
                         document.getElementById("graphdiv"),
