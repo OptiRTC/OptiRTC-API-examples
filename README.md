@@ -7,8 +7,8 @@ To receive messages about updates to these examples, log in to Github and "Watch
 
 To use these examples, download the file to your computer and open them in a modern web browser, such as Google Chrome or Mozilla Firefox.
 
-[GET a DataPoint](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-singleDataPointGet.html)
+[GET a DataPoint](https://github.com/OptiRTC/OptiRTC-API-examples/blob/master/html%2Bjs-singleDataPointGet.html)
 
-[GET a time range of DataPoints, output to browser javascript console](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPaging.html)
+[GET a time range of DataPoints, output to browser javascript console](https://github.com/OptiRTC/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPaging.html)
 
-[GET a time range of DataPoints, output to Dygraphs graph library](https://github.com/Geosyntec/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPagingAndChart.html)
+[GET a time range of DataPoints, output to Dygraphs graph library](https://github.com/OptiRTC/OptiRTC-API-examples/blob/master/html%2Bjs-timeSeriesGetWithPagingAndChart.html)
