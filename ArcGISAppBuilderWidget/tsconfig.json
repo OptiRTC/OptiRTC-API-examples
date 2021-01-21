@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [ "esnext", "DOM", "DOM.Iterable", "esnext.asynciterable", "scripthost" ],
+    "module": "amd",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "outDir": ".tmp",
+    "importHelpers": false,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "removeComments": true,
+    "inlineSources": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "isolatedModules": false,
+    "noEmitOnError": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "paths": {
+      "*": [
+        "*",
+        "node_modules/*",
+        "node_modules/@types/*"
+      ],
+      "NodeModules:*": ["node_modules/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "**/*.js",
+    "**/*.ts"
+  ]
+}

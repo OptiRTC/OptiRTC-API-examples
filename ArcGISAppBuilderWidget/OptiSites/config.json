@@ -1,0 +1,5 @@
+{
+  "optiAPIKey": "Enter Opti Public API Key",
+  "zoomToFitOptiSites": true,
+  "optiSitesLayerVisibleOnStart": true
+}

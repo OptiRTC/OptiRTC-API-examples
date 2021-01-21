@@ -5,3 +5,7 @@
 # Examples:
 
 * [HTML5 and jQuery.js Example](./html5AndJQuery)
+
+* [ArcGIS AppBuild Widget Example](./ArcGISAppBuilderWidget)
+
+* [Typescript / Modern Javascript Examples](./esNextAndTypescript)

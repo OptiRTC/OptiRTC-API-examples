@@ -1,0 +1,1 @@
+define(["require","exports"],(function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.addElementEventListener=void 0;t.addElementEventListener=function(e){var t=e.t,n=e.e,r=e.h;return void 0!==e.useCapture?n.addEventListener(t,r,e.useCapture):n.addEventListener(t,r),function(){return n.removeEventListener(t,r)}}}));

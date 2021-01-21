@@ -1,0 +1,12 @@
+node_modules/
+.tmp
+.eslintcache
+
+*.TMP
+*.log
+.tscache
+.baseDir.ts
+tscommand-*.txt
+*.vimrc
+\#*\#
+.\#*

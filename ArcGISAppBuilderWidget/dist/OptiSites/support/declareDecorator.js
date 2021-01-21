@@ -1,0 +1,1 @@
+define(["require","exports","dojo/_base/declare"],(function(e,r,t){"use strict";Object.defineProperty(r,"__esModule",{value:!0}),r.default=function(){for(var e=[],r=0;r<arguments.length;r++)e[r]=arguments[r];return function(r){return t(e,r.prototype)}}}));
