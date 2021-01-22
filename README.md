@@ -6,6 +6,6 @@
 
 * [HTML5 and jQuery.js Example](./html5AndJQuery)
 
-* [ArcGIS AppBuild Widget Example](./ArcGISAppBuilderWidget)
+* [ArcGIS AppBuilder Widget Example](./ArcGISAppBuilderWidget)
 
 * [Typescript / Modern Javascript Examples](./esNextAndTypescript)
