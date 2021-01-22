@@ -1,4 +1,4 @@
-# ArcGIS AppBuild Widget Example
+# ArcGIS AppBuilder Widget Example
 
 This is an example integration of Opti's Public API in [ArcGIS's
 AppBuilder](https://developers.arcgis.com/web-appbuilder/guide/xt-welcome.htm).
