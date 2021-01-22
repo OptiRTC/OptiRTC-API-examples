@@ -1,0 +1,1 @@
+define(["require","exports","./optiAPIs","./optiAPIs"],(function(t,e,n,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.getDatapointChunks=e.getDatapoints=void 0;var o="datapoint";e.getDatapoints=function(t,e){return n.getAllOptiItemsFlattened(t,o,e)};e.getDatapointChunks=function(t,e){return i.getAllOptiItems(t,o,e)}}));

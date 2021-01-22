@@ -1,0 +1,23 @@
+{
+  "name": "OptiSites",
+  "2D": true,
+  "3D": false,
+  "platform": "HTML",
+  "version": "0.0.1",
+  "wabVersion": "2.16",
+  "author": "",
+  "description": "Opti Sites",
+  "copyright": "",
+  "license": "OptiRTC, Inc",
+  "properties": {
+    "inPanel": false,
+    "hasConfig": true,
+    "hasUIFile": false,
+    "hasSettingPage": true,
+    "hasSettingUIFile": true,
+    "hasSettingLocale": true,
+    "hasSettingStyle": true,
+    "IsController": false,
+    "supportMultiInstance": false
+  }
+}

@@ -1,0 +1,1 @@
+define(["require","exports","./optiAPIs"],(function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.getDatastreams=void 0;t.getDatastreams=function(e){return a.getAllOptiItemsFlattened(e,"datastream")}}));

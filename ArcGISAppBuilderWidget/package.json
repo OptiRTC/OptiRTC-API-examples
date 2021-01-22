@@ -1,0 +1,67 @@
+{
+  "name": "optirtc_arcgis_appbuilder_widget_example",
+  "version": "1.0.0",
+  "description": "Example of ArcGIS App Builder widget that uses OptiRTC's public API",
+  "homepage": "https://github.com/OptiRTC/OptiRTC-API-examples#readme",
+  "bugs": {
+    "url": "https://github.com/OptiRTC/OptiRTC-API-examples/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OptiRTC/OptiRTC-API-examples.git"
+  },
+  "keywords": [
+    "arcgis",
+    "appbuilder",
+    "optirtc"
+  ],
+  "license": "OptiRTC, Inc",
+  "engines": {
+    "node": "~15.5.1",
+    "npm": "~6.14.11"
+  },
+  "author": "dparker@optirtc.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --cache --ext .js,.ts",
+    "lint:js": "eslint . --cache --ext .js",
+    "lint:ts": "eslint . --cache --ext .ts",
+    "lint:clear": "[ -f .eslintcache ] && rm .eslintcache || true",
+    "build": "npm run build:clean && npm run build:ts && npm run build:copy:tmp && npm run build:minifyJS && npm run build:css && npm run build:copy:dist",
+    "build:clean": "shx rm -rf dist/ .tmp/",
+    "build:css": "node buildUtils/buildCSS.js",
+    "build:minifyJS": "node buildUtils/minifyJS.js",
+    "build:ts": "tsc -p tsconfig.json",
+    "build:ts:watch": "tsc -w -p tsconfig.json",
+    "build:copy:dist": "npm run build:copy:html && npm run build:copy:images && npm run build:copy:json && npm run build:copy:js3rdParty",
+    "build:copy:tmp": "cpy '**/**.js' '!js/**' '../.tmp' --parents --cwd=OptiSites",
+    "build:copy:html": "cpy 'OptiSites/**/**.html' 'OptiSites/**/images/**' 'dist' --parents",
+    "build:copy:images": "cpy 'OptiSites/**/images/**' 'dist' --parents",
+    "build:copy:js3rdParty": "cpy 'OptiSites/js/**' 'dist' --parents",
+    "build:copy:json": "cpy 'OptiSites/**/**.json' 'dist' --parents"
+  },
+  "devDependencies": {
+    "@types/arcgis-js-api": "^3.35.0",
+    "@types/dojo": "^1.9.43",
+    "@types/dygraphs": "^1.1.12",
+    "@types/geojson": "^7946.0.7",
+    "@types/sass": "^1.16.0",
+    "@types/shelljs": "^0.8.8",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "app-root-dir": "^1.0.2",
+    "eslint": "^7.18.0",
+    "graceful-fs": "^4.2.4",
+    "moment": "^2.29.1",
+    "sass": "^1.32.5",
+    "shelljs": "^0.8.4",
+    "shx": "^0.3.3",
+    "terser": "^5.5.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.0.6",
+    "dygraphs": "^2.1.0"
+  }
+}
