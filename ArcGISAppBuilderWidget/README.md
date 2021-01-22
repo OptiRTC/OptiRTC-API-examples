@@ -120,7 +120,7 @@ ArcGIS's AppBuilder, this example widget has 2 dependencies (non development dep
 * [cross-fetch](https://github.com/lquixada/cross-fetch): A WHATWG Fetch API
   for older environments that do not support
   [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [dygraphs](https://github.com/danvk/dygraphs): A libray for rendering time
+* [dygraphs](https://github.com/danvk/dygraphs): A library for rendering time
   series charts of data from Opti's public API.
 
 These dependencies are included in [./OptiSites/js](./OptiSites/js) folder and
