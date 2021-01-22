@@ -120,7 +120,7 @@ ArcGIS's AppBuilder, this example widget has 2 dependencies (non development dep
 * [cross-fetch](https://github.com/lquixada/cross-fetch): A WHATWG Fetch API
   for older environments that do not support
   [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [dygraphs](https://github.com/danvk/dygraphs): A libray for rendering time
+* [dygraphs](https://github.com/danvk/dygraphs): A library for rendering time
   series charts of data from Opti's public API.
 
 These dependencies are included in [./OptiSites/js](./OptiSites/js) folder and
@@ -150,13 +150,18 @@ Notes about `devDependencies`:
 
 ## Additional Developer Notes:
 
-* Some typescript type annotation in the ArcGIS AppBuilder ecosystem are poor.
-  * For example the use of `any` is used instead of providing a type definition
-  * It uses incorrect syntax for the [Dojo Toolkit](https://dojotoolkit.org/)'s `inherited()` method. *(Note:
-    ArcGIS's AppBuilder is based on Dojo)*
+* There are known issues with ArcGIS's Typescript type definitions in v3 of the
+  `arcgis-js-api` and AppBuilder.
+  * It is helpful to reference the API docs in addition to the typescript
+    definitions
+    * [ArcGIS API for Javascript v3.x](https://developers.arcgis.com/javascript/3/jsapi/)
+    * [ArcGIS Web AppBuilder Guide](https://developers.arcgis.com/web-appbuilder/guide/getstarted.htm)
+    * [ArcGIS Web AppBuilder API Reference](https://developers.arcgis.com/web-appbuilder/api-reference/css-framework.htm)
+    * [ArcGIS Web AppBuilder Sample Code](https://developers.arcgis.com/web-appbuilder/sample-code/create-custom-in-panel-widget.htm)
+  * In some examples, there is incorrect syntax for the [Dojo Toolkit](https://dojotoolkit.org/)'s `inherited()` method.
     * [Stack Overflow](https://stackoverflow.com/questions/33208956/dojo-error-when-using-this-inheritedarguments-in-strict-mode)
-     describes fix.  The first argument must be a reference to the calling function.
-     For example: in `Widget.ts:postCreate()`, it should be `self.inherited(Widget.prototype.postCreate, arguments);`
-* Warning: ES6 property getters/setters inside classes are sometimes problematic.  AppBuilder is based on Dojo and
+      describes fix.  The first argument must be a reference to the calling function.
+      For example: in `Widget.ts:postCreate()`, it should be `self.inherited(Widget.prototype.postCreate, arguments);`
+* The more recent ES6 property getters/setters inside classes are sometimes problematic.  AppBuilder is based on Dojo and
   there are edge cases where Dojo's mixin mechanism used for creating widgets breaks.
   > Instead use a method rather than a property getter and/or setter.
