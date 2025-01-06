@@ -2,7 +2,7 @@
 
 To use these examples, download the file to your computer and open them in a modern web browser, such as Google Chrome or Mozilla Firefox.
 
-[GET a DataPoint](./html%2Bjs-singleDataPointGet.html)
+[GET the latest DataPoint](./html%2Bjs-singleDataPointGet.html)
 
 [GET a time range of DataPoints, output to browser javascript console](./html%2Bjs-timeSeriesGetWithPaging.html)
 
